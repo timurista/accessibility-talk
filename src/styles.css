@@ -2,3 +2,13 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+button {
+  padding: 8px 16px;
+  background-color: #00cdbe;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: none;
+  margin: 2px;
+  color: white;
+}
