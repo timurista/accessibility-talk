@@ -3,9 +3,19 @@
   text-align: center;
 }
 
-button {
+/* button {
   padding: 8px 16px;
   background-color: #00cdbe;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: none;
+  margin: 2px;
+  color: white;
+} */
+
+.unaccesible-button {
+  padding: 8px 16px;
+  background-color: #ccc;
   text-transform: uppercase;
   border-radius: 3px;
   border: none;

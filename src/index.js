@@ -1,42 +1,41 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import "./styles.css";
-
-import { ExampleButton } from "./components";
+import styled from "styled-components";
+import {
+  AccessibleSwitch,
+  UnaccessibleSwitch,
+  UnaccessibleSignupForm,
+  AccessibleSignupForm
+} from "./components";
 
 // ARIA STATES
 
-// EXAMPLE 1
-//
+const Section = styled.section`
+  box-shadow: 0 2px 2px 2px #ccc;
+  border: 1px solid #444;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 3px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <h5>Aria States</h5>
+    <div className="App" role="main">
       <h1>Testing Out Accessibility</h1>
-      <ExampleButton />
+      <Section>
+        <h2>Accessible Button</h2>
+        <UnaccessibleSwitch />
+        <AccessibleSwitch />
+      </Section>
+      <Section>
+        <h2>Accessible Forms</h2>
+        <UnaccessibleSignupForm />
+        <p>More Accessible Form</p>
+        <AccessibleSignupForm />
+      </Section>
     </div>
   );
 }
-
-// EXAMPLE 1: using totally to identify sematic issues in your html
-
-// the role of headers
-// they signify ordering of importance for screen readers
-
-// screen readers will parse the orders h2 and h1 tags in incorrect order causing confusion
-// for the listener
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <h2>User Experience</h2>
-//       <h1>Testing Out Accessibility</h1>
-//       <h5>Start editing to see some magic happen!</h5>
-//     </div>
-//   );
-// }
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
