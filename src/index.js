@@ -5,10 +5,9 @@ import {
   AccessibleSwitch,
   UnaccessibleSwitch,
   UnaccessibleSignupForm,
-  AccessibleSignupForm
+  AccessibleSignupForm,
+  AccessibleNavigation
 } from "./components";
-
-// ARIA STATES
 
 const Section = styled.section`
   box-shadow: 0 2px 2px 2px #ccc;
@@ -32,6 +31,10 @@ function App() {
         <UnaccessibleSignupForm />
         <p>More Accessible Form</p>
         <AccessibleSignupForm />
+      </Section>
+      <Section>
+        <h2>Accessible Navigation</h2>
+        <AccessibleNavigation />
       </Section>
     </div>
   );
